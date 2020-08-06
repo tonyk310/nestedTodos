@@ -47,6 +47,11 @@ ul {
   /*display: inline-block;*/
   height: 2rem;
   font-size: 2rem;
+
+}
+
+.edit:focus{
+    outline: none;
 }
 
 .view {

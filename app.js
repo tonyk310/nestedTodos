@@ -333,32 +333,6 @@ var app = {
 			notes: ""
 
 		};
-		// Accessing the properties of the todo by using the dataId which was accessed by the event handler.
-		// function accessTodoByDataId(todoArray, dataId) {
-		// 	for (var i = 0; i < todoArray.length; i++) {
-		// 		// Is this the todo which initated the event?
-		// 		if (todoArray[i].id === dataId) {
-		// 			// Push the newTodoObj into the todoArray
-		// 			// Return the value to the function call.
-
-		// 			// return todoArray.push(newTodoObj);
-		// 			return todoArray.splice(i + 1, 0, newTodoObj);
-
-
-		// 		// If not recursively call accessTodoByDataId and pass in the nestedTodo array.
-		// 		} else {
-		// 			var returnValueOfAccessTodoByDataId = accessTodoByDataId(todoArray[i].nestedTodos, dataId);
-		// 			// if this function call returns a value that is not equal to undefined
-		// 			// continue looping through the array.
-		// 			if (returnValueOfAccessTodoByDataId !== undefined) {
-		// 				// if it does return a value end the loop.
-		// 				return returnValueOfAccessTodoByDataId;
-		// 			}
-		// 		}
-		// 	}
-		// }
-		// accessTodoByDataId(app.todos, dataId);
-
 		this.getTodoByDataId(this.todos, dataId, function(todoArray, i) {
 			return todoArray.splice(i + 1, 0, newTodoObj);
 		});
@@ -443,14 +417,9 @@ var app = {
 		if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'main-todo-list') {
 			return;
 		}
-
-
-
-		// console.log("you did it");
-
 		// find the id of the todo in question
 		var dataIdOfTodoToUnNest = e.target.closest('li').getAttribute('data-id');
-		// console.log(dataIdOfTodoToUnNest);
+
 
 		// clone the todo
 			// recurse through the Array and subArrays to access the todo
@@ -510,22 +479,6 @@ var app = {
 	toggle: function (e) {
 
 		var dataId = e.target.closest('li').getAttribute('data-id');
-
-		// function getTodoFromId(todoList, dataId) {
-		// 	for (var i = 0; i < todoList.length; i++) {
-		// 		if (todoList[i].id === dataId) {
-		// 			//base case
-		// 			// CSS to strike through toggle
-		// 			return todoList[i].completed = !todoList[i].completed;					
-		// 		} else {
-		// 			var returnValueOfGetTodoFromId = getTodoFromId(todoList[i].nestedTodos, dataId);
-		// 			if (returnValueOfGetTodoFromId !== undefined) {
-		// 				return returnValueOfGetTodoFromId;
-		// 			}
-		// 		}
-		// 	}
-		// }
-		// getTodoFromId(this.todos, dataId);
 
 		this.getTodoByDataId(this.todos, dataId, function(todoList, i) {
 			return todoList[i].completed = !todoList[i].completed;
