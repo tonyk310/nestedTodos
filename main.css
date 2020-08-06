@@ -1,0 +1,73 @@
+body {
+  background-color: #232B32;
+  color: #efefef;
+  /*font-size: 2rem;*/
+  font-family: 'helvetica';
+
+}
+
+.note {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+}
+
+.bullit {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+
+
+#main-todo-list {
+
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  /*width: 100%;*/
+
+  display: flex;
+/*  align-items: center;
+  justify-content: center;*/
+
+
+}
+
+ul {
+  /*margin: 0 auto;*/
+  list-style: none;
+  /*width: 60%;*/
+  /*display: flex;*/
+  /*align-content: center;*/
+  /*align-self: center; */
+}
+
+.edit {
+  /*display: inline-block;*/
+  height: 2rem;
+  font-size: 2rem;
+}
+
+.view {
+  overflow: auto;
+  width: 100%;
+  max-width: 90vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
